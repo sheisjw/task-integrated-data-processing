@@ -42,7 +42,7 @@ Open a new terminal, in data_processing folder run
 >docker-compose up
 
 ## Step 4: run the Kafka producer
-Module is subscribed to Kafka topic and waiting to accumulate micro-batches of 30 seconds. After window data is accumulated, send the result to the another kafka topic.  
+Module is subscribed to Kafka topic and waiting to accumulate micro-batches of 30 seconds. After window data is accumulated, some data processing can be done (as described in function_a.py), then send the result to the another kafka topic.  
 Open a new terminal, in data_processing folder run 
 >python process_data.py --broker kafka:9092 --source_topic topic_a --group_id my-group --batch_interval_seconds 30 --poll_interval_seconds 10 --target_topic=topic_b
 
