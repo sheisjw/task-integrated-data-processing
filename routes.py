@@ -1,8 +1,6 @@
 from flask import Flask, jsonify, abort, request
 from data_processing.tag_ner import tag_ner, tag_sentences
-from ast import literal_eval
 import time
-import json
 
 app = Flask(__name__)
 

@@ -47,8 +47,8 @@ class DataProcessingModule:
                 print('Message processed, and delivered to {}, key:{}, message: {}'.format(msg.topic(), msg.key(), msg.value()))
 
         if len(self.records_list) > 0:
-            # processed_records_list_raw = [preprocess_text(text.decode('utf-8')) for text in (self.records_list)]
-            # processed_records_list = [vectorize(x) for x in processed_records_list_raw]
+            # processed_records_list = [preprocess_text(text.decode('utf-8')) for text in (self.records_list)]
+            # since there is no pre-processing required for this example, no data processing module is executed
             processed_records_list = self.records_list
             record_key = str(uuid.uuid4())
             record_value = str(processed_records_list)
