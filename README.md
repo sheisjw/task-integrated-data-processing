@@ -36,7 +36,7 @@ A quick test from the terminal using cURL :
 --header 'Content-Type: application/json' \
 --data-raw '{"text": "Find customer with account name BMW"}'
 
-## Step 3, run docker compose to start the kafka cluster
+## Step 3: run docker compose to start the kafka cluster
 To build the cluster we will use a docker-compose file that will start all the docker containers needed: zookeeper and a broker.
 Open a new terminal, in data_processing folder run 
 >docker-compose up
